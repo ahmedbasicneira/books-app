@@ -1,0 +1,13 @@
+<div class="container mt-4">
+    <div *ngIf="book">
+      <h2>{{ book.title }}</h2>
+      <p><strong>Author:</strong> {{ book.author }}</p>
+      <p><strong>Rating:</strong> {{ book.rating }}</p>
+      <p><strong>Description:</strong> {{ book.description }}</p>
+      <button class="btn btn-secondary" (click)="goBack()">Go Back</button>
+    </div>
+    <div *ngIf="!book">
+      <p>Loading...</p>
+    </div>
+  </div>
+  

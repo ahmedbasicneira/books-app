@@ -1,0 +1,38 @@
+<div class="container mt-4">
+    <h2>Update Profile</h2>
+    
+    <div *ngIf="errorMessage" class="alert alert-danger">
+      {{ errorMessage }}
+    </div>
+    
+    <div *ngIf="successMessage" class="alert alert-success">
+      {{ successMessage }}
+    </div>
+  
+    <form (ngSubmit)="updateProfile()">
+      <div class="mb-3">
+        <label for="username" class="form-label">New Username</label>
+        <input
+          type="text"
+          id="username"
+          class="form-control"
+          [(ngModel)]="newUsername"
+          name="username"
+        />
+      </div>
+  
+      <div class="mb-3">
+        <label for="password" class="form-label">New Password</label>
+        <input
+          type="password"
+          id="password"
+          class="form-control"
+          [(ngModel)]="newPassword"
+          name="password"
+        />
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Update Profile</button>
+    </form>
+  </div>
+  

@@ -19,6 +19,14 @@ export class AuthService {
     return this.http.post(`${this.apiUrl}`, user, { headers });
   }
 
+  updateProfile(user: { email: string, username: string, password: string }): Observable<any> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+  
+    return this.http.put(`${this.apiUrl}`, user, { headers });
+  }
+
   login(user: { email: string, password: string }): Observable<any> {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json'
