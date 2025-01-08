@@ -1,5 +1,5 @@
 <div class="container mt-4">
-    <h2>Last 4 Added Books</h2>
+    <h2>Posljednje dodano:</h2>
     <div class="row">
       <div class="col-md-3" *ngFor="let book of books">
         <div class="card" style="width: 18rem;">
@@ -7,7 +7,7 @@
           <div class="card-body">
             <h5 class="card-title">{{ book.title }}</h5>
             <p class="card-text">By {{ book.author }}</p>
-            <button class="btn btn-primary" (click)="viewBookDetails(book.id)">View Details</button>
+            <button class="btn btn-primary" (click)="viewBookDetails(book.id)">Pogledaj detalje</button>
           </div>
         </div>
       </div>
