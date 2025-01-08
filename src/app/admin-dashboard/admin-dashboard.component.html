@@ -1,0 +1,29 @@
+<div class="container mt-3">
+    <h2>Admin Dashboard</h2>
+    <button (click)="createBook()" class="btn btn-primary">Create New Book</button>
+  
+    <table class="table mt-3">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Rating</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of books">
+          <td>{{ book.id }}</td>
+          <td>{{ book.title }}</td>
+          <td>{{ book.author }}</td>
+          <td>{{ book.rating }}</td>
+          <td>
+            <button (click)="deleteBook(book.id)" class="btn btn-danger">Delete</button>
+            <!-- <button [routerLink]="['/admin/edit-book', book.id]" class="btn btn-warning">Edit</button> -->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

@@ -1,0 +1,27 @@
+<div class="container">
+    <h3>Create New Book</h3>
+    <form (ngSubmit)="createBook()">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" id="title" class="form-control" [(ngModel)]="title" name="title" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="author">Author</label>
+        <input type="text" id="author" class="form-control" [(ngModel)]="author" name="author" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea id="description" class="form-control" [(ngModel)]="description" name="description" required></textarea>
+      </div>
+  
+      <div class="form-group">
+        <label for="image">Upload Image</label>
+        <input type="file" (change)="onFileChange($event)" class="form-control" />
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Save Book</button>
+    </form>
+  </div>
+  
