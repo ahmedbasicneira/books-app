@@ -1,15 +1,15 @@
 <div class="container mt-3">
     <h2>Admin Dashboard</h2>
-    <button (click)="createBook()" class="btn btn-primary">Create New Book</button>
+    <button (click)="createBook()" class="btn btn-primary">Dodaj novu knjigu</button>
   
     <table class="table mt-3">
       <thead>
         <tr>
           <th>#</th>
-          <th>Title</th>
-          <th>Author</th>
-          <th>Rating</th>
-          <th>Actions</th>
+          <th>Naziv</th>
+          <th>Autor</th>
+          <th>Rang</th>
+          <th>Akcije</th>
         </tr>
       </thead>
       <tbody>
@@ -19,7 +19,7 @@
           <td>{{ book.author }}</td>
           <td>{{ book.rating }}</td>
           <td>
-            <button (click)="deleteBook(book.id)" class="btn btn-danger">Delete</button>
+            <button (click)="deleteBook(book.id)" class="btn btn-danger">Obrisi</button>
             <!-- <button [routerLink]="['/admin/edit-book', book.id]" class="btn btn-warning">Edit</button> -->
           </td>
         </tr>
